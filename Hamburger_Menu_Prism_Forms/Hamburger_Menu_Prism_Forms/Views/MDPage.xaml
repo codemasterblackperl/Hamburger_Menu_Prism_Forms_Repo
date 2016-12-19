@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="Hamburger_Menu_Prism_Forms.Views.MDPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Default">
+            <StackLayout>
+                <Button Text="Billing" Command="{Binding Path=NavigationCommand}" CommandParameter="MyNavigationPage/BillingPage"/>
+                <Button Text="Your Order" Command="{Binding Path=NavigationCommand}" CommandParameter="MyNavigationPage/PlaceOrderPage"/>
+                <Button Text="Settings" Command="{Binding Path=NavigationCommand}" CommandParameter="MyNavigationPage/SettingsPage"/>
+                <Button Text="Settings"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+</MasterDetailPage>
